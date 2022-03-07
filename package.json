@@ -5,11 +5,15 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:dev": "ng build -c development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "compodoc": "npx compodoc -p tsconfig.doc.json",
+    "ngd": "npx ngd -p tsconfig.doc.json -o",
+    "source-map-explorer": "source-map-explorer dist/bimbom-frontend/**/*.js"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +48,7 @@
     "@angular-eslint/template-parser": "13.1.0",
     "@angular/cli": "~13.2.5",
     "@angular/compiler-cli": "~13.2.0",
+    "@compodoc/compodoc": "^1.1.19",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.11.0",
@@ -60,6 +65,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
+    "source-map-explorer": "^2.5.2",
     "typescript": "~4.5.2"
   },
   "lint-staged": {

@@ -6,4 +6,5 @@ karma.conf.js
 commitlint.config.js
 src/test.ts
 src/main.ts
-src/app/*.spec.ts
+src/polyfills.ts
+src/**/*.spec.ts
